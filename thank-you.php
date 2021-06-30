@@ -20,10 +20,7 @@ use Extension\Membership\Membership;
  	}
  }
 
-// Create User if NOT EXSIT
 
-
-// @END
 
 $cartdata = Session::get('cartSessData');
 $klaviyogummies = array(
