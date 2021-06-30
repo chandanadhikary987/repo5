@@ -64,24 +64,7 @@ $csvProductSKUs = implode(',', $productSKUs);
 $productSKUs = "['".implode("','", $productSKUs)."']";
 
  Session::set('skipMember',true);
-if (Session::has('memberSessionData.member_token')){
-  if(empty($_GET['email'])){
-    $userData['email']=Session::get('memberSessionData.email');
-  }else{
-    $userData['email']=$_GET['email'];
-  }
-   $userData=memberDetails(trim($userData['email']),trim('membership'));
-   $user_info=json_decode($userData['user_info'],TRUE);
- if(!empty($user_info)){
-     Session::set('memberSessionData.firstName',$user_info['user_info']['firstName']);
-     Session::set('memberSessionData.lastName',$user_info['user_info']['lastName']);
-     Session::set('memberSessionData.phone',$user_info['user_info']['phone']);
-   }
 
-}else{
-  $userData=[];
-  $user_info=[];
-}
 
 
 
