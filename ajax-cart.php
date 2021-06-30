@@ -12,33 +12,7 @@ if(!empty($_POST['productId'])){
 	$cartArray = array_filter($cartSessData);
 
 	
-    if($_POST['productPageName']=='product-gummies.php'){
-
-     if(!empty($cartArray['productId_1'])){
-	 	Session::set('cartSessData.productId_1', $previousSession);
-	 
-	 }elseif(!empty($cartArray['productId_2'])){
-	 	Session::set('cartSessData.productId_2', $previousSession);
-	 
-	 }elseif(!empty($cartArray['productId_3'])){
-	 	Session::set('cartSessData.productId_3', $previousSession);	 
-	 }
-	 elseif(!empty($cartArray['productId_4'])){
-	 	Session::set('cartSessData.productId_4', $previousSession);	
-	 }
-	 elseif(!empty($cartArray['productId_5'])){
-	 	Session::set('cartSessData.productId_5', $previousSession);	
-	 }
-	 elseif(!empty($cartArray['productId_6'])){
-	 	Session::set('cartSessData.productId_6', $previousSession);
-	
-	 }
-	 else{
-	 	//Session::set('cartSessData.productId_'.$productID, $productDetails);
-	 }
-
-
-    }
+      }
     //if product cbd vegan
      else if($_POST['productPageName']=='product-vegan-cbd.php'){
      if(!empty($cartArray['productId_7'])){
